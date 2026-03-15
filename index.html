@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mia Farina | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 scroll-smooth">
 
 <!-- NAVBAR -->
 <header class="flex justify-between items-center px-8 py-6">
@@ -21,12 +22,28 @@
 </header>
 
 <!-- HERO -->
-<section class="text-center py-24 px-6">
-  <h2 class="text-4xl font-bold mb-4">Customer Success Manager & Builder</h2>
-  <p class="max-w-xl mx-auto text-lg text-gray-600">
-    Mechanical engineer turned customer success professional passionate about
-    building systems, communities, and tools that help people succeed.
+<section class="text-center py-32 px-6">
+  <h2 class="text-5xl font-bold mb-6 leading-tight">
+    Building systems that help people succeed
+  </h2>
+
+  <p class="max-w-xl mx-auto text-lg text-gray-600 mb-8">
+    Mechanical engineer turned customer success manager. 
+    I enjoy building products, communities, and tools that help people 
+    navigate their careers and achieve meaningful goals.
   </p>
+
+  <div class="flex justify-center gap-4">
+    <a href="#projects"
+       class="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800">
+       View Projects
+    </a>
+
+    <a href="#contact"
+       class="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-100">
+       Contact Me
+    </a>
+  </div>
 </section>
 
 <!-- ABOUT -->
@@ -42,67 +59,70 @@
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="bg-white py-20 px-6">
-  <div class="max-w-4xl mx-auto">
-    <h3 class="text-2xl font-semibold mb-8">Experience</h3>
+<div class="border-l border-gray-300 pl-6 space-y-10">
 
-    <div class="space-y-8">
-
-      <div>
-        <h4 class="font-semibold">Customer Success Manager</h4>
-        <p class="text-gray-500">2025 – Present</p>
-        <p class="text-gray-600 mt-2">
-          Manage customer onboarding, product adoption, and feedback loops to
-          improve long-term client success and retention.
-        </p>
-      </div>
-
-      <div>
-        <h4 class="font-semibold">Engineering Intern</h4>
-        <p class="text-gray-500">Medical Device Industry</p>
-        <p class="text-gray-600 mt-2">
-          Created inspection sheets for class II medical devices and
-          collaborated with cross-functional teams to ensure dimensional
-          specifications and quality standards.
-        </p>
-      </div>
-
-    </div>
+  <div data-aos="fade-right">
+    <p class="text-sm text-gray-500">2025 – Present</p>
+    <h4 class="font-semibold">Customer Success Manager</h4>
+    <p class="text-gray-600">
+      Manage customer relationships, onboarding, and product adoption while
+      providing feedback to internal product teams.
+    </p>
   </div>
-</section>
+
+  <div data-aos="fade-right" data-aos-delay="100">
+    <p class="text-sm text-gray-500">Engineering Internship</p>
+    <h4 class="font-semibold">Medical Device Industry</h4>
+    <p class="text-gray-600">
+      Created inspection sheets for Class II medical devices and collaborated
+      with engineering teams to ensure dimensional accuracy.
+    </p>
+  </div>
+
+  <div data-aos="fade-right" data-aos-delay="200">
+    <p class="text-sm text-gray-500">Senior Capstone</p>
+    <h4 class="font-semibold">Autonomous Robot Project</h4>
+    <p class="text-gray-600">
+      Designed system architecture for a robotic tour guide capable of
+      navigation and interaction.
+    </p>
+  </div>
+
+</div>
 
 <!-- PROJECTS -->
-<section id="projects" class="max-w-5xl mx-auto py-20 px-6">
-  <h3 class="text-2xl font-semibold mb-10">Projects</h3>
+<div class="grid md:grid-cols-3 gap-8">
 
-  <div class="grid md:grid-cols-3 gap-8">
-
-    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-      <h4 class="font-semibold mb-2">Career Mentorship Platform</h4>
-      <p class="text-gray-600 text-sm">
-        Building a subscription-based mentorship service that helps students
-        navigate career paths through structured guidance and peer mentorship.
-      </p>
-    </div>
-
-    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-      <h4 class="font-semibold mb-2">Tutoring Business</h4>
-      <p class="text-gray-600 text-sm">
-        Founded and operated a tutoring service supporting 8–10 clients with
-        personalized learning strategies.
-      </p>
-    </div>
-
-    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-      <h4 class="font-semibold mb-2">Autonomous Tour Guide Robot</h4>
-      <p class="text-gray-600 text-sm">
-        Senior capstone project building a robotic welcome guide capable of
-        autonomous navigation and interaction.
-      </p>
-    </div>
-
+  <div data-aos="fade-up" class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-xl transition duration-300">
+    <h4 class="font-semibold mb-2">Career Mentorship Platform</h4>
+    <p class="text-gray-600 text-sm mb-4">
+      Building a subscription service helping students navigate careers through
+      mentorship, roadmaps, and structured guidance.
+    </p>
+    <span class="text-blue-600 text-sm group-hover:underline">Learn more →</span>
   </div>
-</section>
+
+  <div data-aos="fade-up" data-aos-delay="100"
+       class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-xl transition duration-300">
+    <h4 class="font-semibold mb-2">Tutoring Business</h4>
+    <p class="text-gray-600 text-sm mb-4">
+      Built and managed a tutoring service supporting multiple students with
+      personalized learning systems and study strategies.
+    </p>
+    <span class="text-blue-600 text-sm group-hover:underline">Learn more →</span>
+  </div>
+
+  <div data-aos="fade-up" data-aos-delay="200"
+       class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-xl transition duration-300">
+    <h4 class="font-semibold mb-2">Autonomous Tour Guide Robot</h4>
+    <p class="text-gray-600 text-sm mb-4">
+      Designed and built an autonomous welcome robot capable of navigating a
+      building and guiding visitors.
+    </p>
+    <span class="text-blue-600 text-sm group-hover:underline">Learn more →</span>
+  </div>
+
+</div>
 
 <!-- CONTACT -->
 <section id="contact" class="bg-gray-100 py-20 px-6 text-center">
@@ -115,6 +135,12 @@
      Get in Touch
   </a>
 </section>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
+<footer class="text-center py-10 text-gray-500 text-sm">
+  © 2026 Mia Farina — Built with GitHub Pages & Tailwind
+</footer>
