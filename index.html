@@ -11,14 +11,6 @@
 <body class="bg-gray-50 text-gray-800 scroll-smooth">
 
 <!-- NAVBAR -->
-<header class="flex justify-between items-center px-8 py-6">
-  <h1 class="text-xl font-semibold">Mia Farina</h1>
-  <nav class="space-x-6">
-    <a href="#about" class="hover:text-blue-600">About</a>
-    <a href="#experience" class="hover:text-blue-600">Experience</a>
-    <a href="#projects" class="hover:text-blue-600">Projects</a>
-    <a href="#contact" class="hover:text-blue-600">Contact</a>
-  </nav>
 <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
 
 <div class="max-w-6xl mx-auto flex justify-between items-center px-8 py-5">
@@ -38,7 +30,7 @@
 </header>
 
 <!-- HERO -->
-<section class="relative text-center py-40 px-6 overflow-hidden">
+<section class="relative text-center pt-40 pb-32 px-6 overflow-hidden">
 
 <div class="absolute inset-0 -z-10 bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 animate-gradient"></div>
 
@@ -47,10 +39,12 @@
 </h2>
 
 <p class="max-w-xl mx-auto text-lg text-gray-700 mb-8">
-  Mechanical engineer turned customer success manager.
-  I enjoy building products, communities, and tools that help people
-  navigate their careers and achieve meaningful goals.
-  <div class="mt-10 flex justify-center">
+Mechanical engineer turned customer success manager.
+I enjoy building products, communities, and tools that help people
+navigate their careers and achieve meaningful goals.
+</p>
+
+<div class="mt-10 flex justify-center">
 
 <div class="bg-white/80 backdrop-blur-md shadow-lg rounded-xl p-6 max-w-sm">
 
@@ -175,13 +169,14 @@ Learn more →
 </button>
   </div>
 
-  <div data-aos="fade-up" data-aos-delay="200"
-       class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-xl transition duration-300">
-    <h4 class="font-semibold mb-2">Autonomous Tour Guide Robot</h4>
-    <p class="text-gray-600 text-sm mb-4">
-      Designed and built an autonomous welcome robot capable of navigating a
-      building and guiding visitors.
-    </p>
+<div data-aos="fade-right" data-aos-delay="200">
+  <p class="text-sm text-gray-500">Senior Capstone</p>
+  <h4 class="font-semibold">Autonomous Robot Project</h4>
+  <p class="text-gray-600">
+    Designed system architecture for a robotic tour guide capable of
+    navigation and interaction.
+  </p>
+</div>
    <button onclick="openProject('robot')" class="text-blue-600 text-sm group-hover:underline">
 Learn more →
 </button>
@@ -236,9 +231,10 @@ Learn more →
       discuss ideas, or learn more about my work.
     </p>
 
-  <button onclick="openContact()"
-      Send Email
-    </a>
+<a href="mailto:your@email.com"
+   class="text-blue-600 underline">
+   Send Email
+</a>
 
   </div>
 
