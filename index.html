@@ -11,6 +11,29 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 
   <style>
+    <style>
+  /* Micro-interactions — respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+  }
+
+  /* Card hover elevation (slightly stronger than default shadow) */
+  .elevate {
+    transition: transform 200ms ease, box-shadow 200ms ease;
+  }
+  .elevate:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .elevate:active { transform: translateY(0); box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
+
+  /* Link preview underline animation */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 180ms ease;
+  }
+  .link-underline:hover { background-size: 100% 1px; }
+</style>
     :root{
       /* Unified palette */
       --bg: #F8FAFF;
@@ -90,11 +113,11 @@
         </p>
       </div>
 
-      <!-- Profile image OUTSIDE the card -->
-      <div class="flex justify-center mb-6 md:mb-8">
-        <img src="https://i.pravatar.cc/160" alt="Profile photo of Mia Farina"
-             class="w-24 h-24 md:w-28 md:h-28 rounded-full ring-4 ring-white/70 shadow-md object-cover">
-      </div>
+<!-- Profile image OUTSIDE the card -->
+<div class="flex justify-center mb-6 md:mb-8">
+  <img src="IMG_4639.JPG" alt="Portrait of Mia Farina"
+       class="h-36 w-36 md:h-40 md:w-40 rounded-full object-cover ring-4 ring-white/70 shadow-md">
+</div>
 
       <!-- Card -->
       <div class="flex flex-col items-center">
@@ -134,30 +157,66 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" data-aos="fade-up" class="py-20 md:py-24 px-6 bg-gradient-to-b from-[var(--bg)] to-[var(--tint)]">
-    <div class="max-w-3xl mx-auto">
-      <h3 class="text-2xl font-semibold mb-4">About Me</h3>
-      <p class="text-[var(--muted)] leading-relaxed mb-6">
-        I studied mechanical engineering at Villanova where I developed a strong
-        foundation in problem solving, system design, and collaboration. My
-        experience ranges from engineering internships working with medical device
-        specifications to leading customer relationships and driving product
-        insights as a Customer Success Manager.
-      </p>
+<section id="about" data-aos="fade-up" class="py-20 md:py-24 px-6 bg-gradient-to-b from-[var(--bg)] to-[var(--tint)]">
+  <div class="max-w-3xl mx-auto">
+    <h3 class="text-2xl font-semibold mb-4">About Me</h3>
 
-      <!-- Resume Link Button -->
-      <a href="/resume.pdf" target="_blank" rel="noopener"
-         class="inline-flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-lg hover:bg-gray-800 transition">
-        <span>View My Résumé (PDF)</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M13 7h6m0 0v6m0-6L10 16M6 7v10a2 2 0 002 2h8"/>
-        </svg>
-      </a>
-      <!-- If your file is at /assets/resume.pdf, change href="/assets/resume.pdf" -->
+    <p class="text-[var(--muted)] leading-relaxed mb-6">
+      I studied mechanical engineering at Villanova where I developed a strong
+      foundation in problem solving, system design, and collaboration. My
+      experience ranges from engineering internships working with medical device
+      specifications to leading customer relationships and driving product
+      insights as a Customer Success Manager.
+    </p>
+
+    <!-- Resume Link Button -->
+    <a href="/resume.pdf" target="_blank" rel="noopener"
+       class="inline-flex items-center gap-2 bg-black text-white px-5 py-3 rounded-lg hover:bg-gray-800 active:scale-[0.98] transition">
+      <span>View My Résumé (PDF)</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M13 7h6m0 0v6m0-6L10 16M6 7v10a2 2 0 002 2h8"/>
+      </svg>
+    </a>
+
+    <!-- Values I Work By -->
+    <div class="mt-10">
+      <h4 class="text-lg font-semibold mb-3">Values I Work By</h4>
+      <ul class="grid sm:grid-cols-2 gap-3 text-[var(--muted)]">
+        <li class="flex items-start gap-2">
+          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+          <span>Clarity over complexity — simple systems scale.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+          <span>Build with users, not for them — real feedback early and often.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+          <span>Craft and reliability — details matter, reliability earns trust.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-1 h-2 w-2 rounded-full bg-indigo-400"></span>
+          <span>Technology should amplify human creativity.</span>
+        </li>
+      </ul>
     </div>
-  </section>
-
+  </div>
+</section>
+ <!-- WHY I BUILD -->
+  <section id="why" data-aos="fade-up" class="py-16 md:py-20 px-6 bg-gradient-to-b from-[var(--tint)] to-[var(--brand-50)]">
+  <div class="max-w-3xl mx-auto">
+    <h3 class="text-2xl font-semibold mb-4">Why I Build</h3>
+    <p class="text-[var(--muted)] leading-relaxed">
+      I’m driven by the challenge of turning messy, human problems into
+      dependable systems that people enjoy using. My background in mechanical
+      engineering taught me to reason from first principles; my work in customer
+      success sharpened how I listen, frame problems, and prioritize what
+      actually improves outcomes. I care about products that help people grow —
+      especially at the moment they’re deciding what to do next.
+    </p>
+  </div>
+</section>
   <!-- EXPERIENCE -->
   <section id="experience" class="py-20 md:py-24 px-6 bg-gradient-to-b from-[var(--tint)] to-[var(--brand-50)]">
     <div class="max-w-4xl mx-auto">
@@ -209,6 +268,12 @@
           </p>
           <button onclick="openProject('mentorship')" class="text-indigo-600 text-sm group-hover:underline">
             Learn more →
+            <!-- Tags -->
+<div class="flex flex-wrap gap-2 mb-4">
+  <span class="text-xs px-2 py-1 rounded-full bg-indigo-50 text-indigo-700">Product strategy</span>
+  <span class="text-xs px-2 py-1 rounded-full bg-indigo-50 text-indigo-700">User research</span>
+  <span class="text-xs px-2 py-1 rounded-full bg-indigo-50 text-indigo-700">Prototype</span>
+</div>
           </button>
         </div>
 
@@ -221,6 +286,12 @@
           </p>
           <button onclick="openProject('tutoring')" class="text-indigo-600 text-sm group-hover:underline">
             Learn more →
+            <!-- Tags -->
+<div class="flex flex-wrap gap-2 mb-4">
+  <span class="text-xs px-2 py-1 rounded-full bg-indigo-50 text-indigo-700">Product strategy</span>
+  <span class="text-xs px-2 py-1 rounded-full bg-indigo-50 text-indigo-700">User research</span>
+  <span class="text-xs px-2 py-1 rounded-full bg-indigo-50 text-indigo-700">Prototype</span>
+</div>
           </button>
         </div>
 
@@ -233,6 +304,12 @@
           </p>
           <button onclick="openProject('robot')" class="text-indigo-600 text-sm group-hover:underline">
             Learn more →
+            <!-- Tags -->
+<div class="flex flex-wrap gap-2 mb-4">
+  <span class="text-xs px-2 py-1 rounded-full bg-indigo-50 text-indigo-700">Product strategy</span>
+  <span class="text-xs px-2 py-1 rounded-full bg-indigo-50 text-indigo-700">User research</span>
+  <span class="text-xs px-2 py-1 rounded-full bg-indigo-50 text-indigo-700">Prototype</span>
+</div>
           </button>
         </div>
 
@@ -245,11 +322,60 @@
           </p>
           <button onclick="openProject('upcoming')" class="text-indigo-600 text-sm group-hover:underline">
             Learn more →
+            <!-- Tags -->
+<div class="flex flex-wrap gap-2 mb-4">
+  <span class="text-xs px-2 py-1 rounded-full bg-indigo-50 text-indigo-700">Product strategy</span>
+  <span class="text-xs px-2 py-1 rounded-full bg-indigo-50 text-indigo-700">User research</span>
+  <span class="text-xs px-2 py-1 rounded-full bg-indigo-50 text-indigo-700">Prototype</span>
+</div>
           </button>
         </div>
       </div>
     </div>
   </section>
+<section id="stack" class="py-16 md:py-20 px-6 bg-gradient-to-b from-[var(--accent-50)] to-white">
+  <div class="max-w-6xl mx-auto">
+    <h3 class="text-2xl font-semibold mb-6">Tech & Product Stack</h3>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Technical -->
+      <div class="bg-[var(--surface)] p-6 rounded-xl shadow-sm elevate">
+        <h4 class="font-semibold mb-3">Technical</h4>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">Python</span>
+          <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">APIs</span>
+          <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">SQL (basics)</span>
+          <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">Data viz</span>
+          <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">Robotics</span>
+        </div>
+      </div>
+
+      <!-- Product / UX -->
+      <div class="bg-[var(--surface)] p-6 rounded-xl shadow-sm elevate">
+        <h4 class="font-semibold mb-3">Product & UX</h4>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">Figma</span>
+          <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">User flows</span>
+          <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">Storyboarding</span>
+          <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">Experiment design</span>
+          <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">JTBD</span>
+        </div>
+      </div>
+
+      <!-- Systems & Ops -->
+      <div class="bg-[var(--surface)] p-6 rounded-xl shadow-sm elevate">
+        <h4 class="font-semibold mb-3">Systems & Ops</h4>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">Notion</span>
+          <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">Jira</span>
+          <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">Airtable</span>
+          <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">Excel</span>
+          <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">Automation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- BUILDING (What I'm working on now) -->
   <section id="building" class="py-20 md:py-24 px-6 bg-gradient-to-b from-[var(--accent-50)] to-white">
