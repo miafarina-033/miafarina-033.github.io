@@ -7,8 +7,8 @@
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 
   <style>
     :root{
@@ -35,7 +35,7 @@
       animation:gradientMove 14s ease-in-out infinite;
     }
 
-    /* Feather bottom of hero */
+    /* Feather the bottom of the hero to blend into next section */
     .hero-fade {
       mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0));
       -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0));
@@ -92,11 +92,11 @@
 
       <!-- Profile image OUTSIDE the card -->
       <div class="flex justify-center mb-6 md:mb-8">
-        <img src="https://i.pravatar.cc/160" alt="Profile picture of Mia Farina"
-             class="w-24 h-24 md:w-28 md:h-28 rounded-full ring-4 ring-white/70 shadow-lg object-cover"/>
+        <img src="https://i.pravatar.cc/160" alt="Profile photo of Mia Farina"
+             class="w-24 h-24 md:w-28 md:h-28 rounded-full ring-4 ring-white/70 shadow-md object-cover">
       </div>
 
-      <!-- Card + CTAs -->
+      <!-- Card -->
       <div class="flex flex-col items-center">
         <div class="bg-[var(--surface)]/80 backdrop-blur-md shadow-lg rounded-2xl p-6 md:p-7 w-full max-w-md">
           <div class="flex items-start gap-4">
@@ -114,7 +114,7 @@
         <!-- CTAs with added breathing room -->
         <div class="mt-8 md:mt-10 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
           <a href="#projects"
-             class="inline-flex items-center justify-center bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition">
+             class="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition text-center">
              View Projects
           </a>
           <button onclick="openContact()"
@@ -137,13 +137,24 @@
   <section id="about" data-aos="fade-up" class="py-20 md:py-24 px-6 bg-gradient-to-b from-[var(--bg)] to-[var(--tint)]">
     <div class="max-w-3xl mx-auto">
       <h3 class="text-2xl font-semibold mb-4">About Me</h3>
-      <p class="text-[var(--muted)] leading-relaxed">
+      <p class="text-[var(--muted)] leading-relaxed mb-6">
         I studied mechanical engineering at Villanova where I developed a strong
         foundation in problem solving, system design, and collaboration. My
         experience ranges from engineering internships working with medical device
         specifications to leading customer relationships and driving product
         insights as a Customer Success Manager.
       </p>
+
+      <!-- Resume Link Button -->
+      <a href="/resume.pdf" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-lg hover:bg-gray-800 transition">
+        <span>View My Résumé (PDF)</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 7h6m0 0v6m0-6L10 16M6 7v10a2 2 0 002 2h8"/>
+        </svg>
+      </a>
+      <!-- If your file is at /assets/resume.pdf, change href="/assets/resume.pdf" -->
     </div>
   </section>
 
@@ -316,9 +327,7 @@
         Feel free to reach out if you'd like to collaborate, discuss ideas, or learn more about my work.
       </p>
       <a href="mailto:your@email.com"
-         class="text-indigo-700 font-medium underline">
-         Send Email
-      </a>
+         class="text-indigo-600 underline">Send Email</a>
     </div>
   </div>
 
@@ -327,7 +336,7 @@
     © 2026 Mia Farina — Built with GitHub Pages & Tailwind
   </footer>
 
-  <!-- AOS + Scripts -->
+  <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ once: true, duration: 600 });
