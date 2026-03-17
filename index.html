@@ -1,1 +1,55 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Document</title>\n    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">\n    <style>\n        :root {\n            --primary-color: #3490dc;\n            --secondary-color: #ffed4a;\n            --accent-color: #e3342f;\n            --neutral-color: #6c757d;\n            --base-color: #f8fafc;\n        }\n    </style>\n</head>\n<body class="bg-base-color text-neutral-color">\n    <h1 class="text-primary-color">Welcome to Miafarina</h1>\n    <button class="bg-primary-color hover:bg-accent-color text-white font-bold py-2 px-4 rounded">Click Me</button>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #3490dc;
+            --secondary-color: #ffed4a;
+            --accent-color: #e3342f;
+            --background-color: #f8fafc;
+            --text-color: #2d3748;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .footer {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        .button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to My Portfolio</h1>
+    </header>
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>Content about myself, my skills, and experiences.</p>
+            <button class="button">Contact Me</button>
+        </section>
+        <section>
+            <h2>Projects</h2>
+            <p>Details of my projects.</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2026 My Portfolio</p>
+    </footer>
+</body>
+</html>
