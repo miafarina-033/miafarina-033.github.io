@@ -1,11 +1,5 @@
 # miafarina-033.github.io
 # Mia Farina
-Welcome to my personal portfolio! I’m in my first rotation of the EMAP program as a customer success manager at Siemens Energy.
-## About Me
-I have experience in ...
-
-## Skills
-- 
-
+Welcome to my personal portfolio! This live site is used to showcase my background, experience, and projects. 
 ## Contact
-You can reach me at [LinkedIn](https://www.linkedin.com/username) or [GitHub](https://github.com/username).
+You can reach me at [LinkedIn](https://www.linkedin.com/in/mia-farina) or [GitHub](https://github.com/miafarina-033).
